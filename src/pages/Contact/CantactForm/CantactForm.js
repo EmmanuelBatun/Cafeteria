@@ -1,7 +1,19 @@
 import React from 'react'
 import './CantactForm.css'
+import GoogleMapReact from 'google-map-react';
 
 import bgImage from '../../../assets/cake.jpg'
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const defaultProps = {
+    center: {
+      lat: 20.60621890498037, 
+      lng:-88.26204900499128
+    },
+    zoom:20
+  };
+
+
 
 const CantactForm = () => {
   return (
@@ -58,6 +70,18 @@ const CantactForm = () => {
                 <button>Submit</button>
             </div>
         </div>
+        <div style={{ height: '50vh', width: '50%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "AIzaSyAMtXDVWKxVZztZd1QOlpeiXyQfYQpna5E" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+        <AnyReactComponent
+          
+          text="My Marker"
+        />
+      </GoogleMapReact>
+    </div>
     </div>
   )
 }
