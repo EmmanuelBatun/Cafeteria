@@ -8,7 +8,7 @@ const Hero = () => {
         <div className='container'>
         <div className='hero-content'>
             <h1 className='heading-primary'>
-                <span>welcome</span> to restaurant
+                <span>welcome to restaurant</span> 
             </h1>
 
             <p className='text-white'>The best gourmet restaurant available in Manhatten</p>

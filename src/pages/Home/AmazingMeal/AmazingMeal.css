@@ -17,7 +17,7 @@
 .slick-prev:before,
 .slick-next:before,
 .slick-dots li.slick-active button:before {
-    color: var(--color-primary) !important;
+    color:black
 }
 
 .amazing-content {
@@ -25,6 +25,7 @@
 }
 
 .amazing-content p {
+    color: black;
     padding: 20px 0;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .amazing-card {
-    width: 30%;
+    width: 25%;
 }
 
 .amazing-card-image {
@@ -51,8 +52,14 @@
 }
 
 .amazing-card-content p {
+    color: black;
     padding-top: 10px;
 }
+
+blockquote{
+    color: black;
+}
+
 
 @media screen and (max-width: 768px ) {
     .amazing-container {

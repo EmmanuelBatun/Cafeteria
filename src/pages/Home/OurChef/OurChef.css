@@ -15,9 +15,11 @@
 }
 
 .chef-info h4 {
+    color: black;
     text-transform: uppercase;
 }
 
 .chef-info p {
+    color: black;
     padding-top: 10px;
 }
