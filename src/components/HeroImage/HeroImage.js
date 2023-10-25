@@ -4,10 +4,10 @@ import "./HeroImage.css";
 const HeroImage = (props) => {
   return (
     <div
-      className="container"
       style={{
         background: `url(${props.bgImage}) no-repeat bottom center/cover`,
         height: "60vh",
+
       }}
     >
         <div className="banner-content">

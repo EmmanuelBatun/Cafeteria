@@ -2,6 +2,7 @@ import React from "react";
 import ListItem from "../../../components/ListItem/ListItem";
 import "./MenuOfTheDay.css";
 
+
 import image1 from "../../../assets/burger.jpg";
 import image2 from "../../../assets/cheese.jpg";
 
@@ -19,6 +20,8 @@ const menuData = [
     img: image2,
   },
 ];
+
+
 
 
 

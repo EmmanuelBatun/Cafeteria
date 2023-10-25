@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import  logo  from "../../assets/logo.jpg"
 
 const Footer = () => {
   return (
@@ -36,15 +38,16 @@ const Footer = () => {
               seattle@enfold-restaurant.com
             </Link>
           </div>
-
-          <div className="footer-grid-item">
-            <h3>enfold dallas</h3>
-            <p>11311 Harry Hines Blvd</p>
-            <p>Dallas, TX, United States</p>
-            <p>(555) 389 976</p>
-            <Link to="#" className="text-white">
-              dallas@enfold-restaurant.com
-            </Link>
+          <div>
+          <FloatingWhatsApp 
+          phoneNumber="9981592390" 
+          accountName="Estacion Cafe"
+          placeholder="Hola Necesito infromacion..."
+          chatMessage="Hola en que podemos ayudarte"
+          darkMode= "true"
+          statusMessage="Respuesta en menos de 30min"
+          avatar={logo}
+          />
           </div>
         </div>
       </div>

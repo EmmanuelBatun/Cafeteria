@@ -1,8 +1,9 @@
 .banner-content {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    margin-left: 15%;
+    align-items: center;
 }
 .color{
-    background-color: rgb(131, 75, 35);
+    background-color: chocolate;
 }
