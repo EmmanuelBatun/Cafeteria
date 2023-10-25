@@ -1,0 +1,17 @@
+.hero-img {
+    height: 70vh;
+    background-image: url('../../../assets/coffee-38.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 40%;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
