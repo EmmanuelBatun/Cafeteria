@@ -1,21 +1,21 @@
 import React from 'react'
 import './CantactForm.css'
-import GoogleMapReact from 'google-map-react';
+import emailjs from 'emailjs-com';
 
 import bgImage from '../../../assets/cake.jpg'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const defaultProps = {
-    center: {
-      lat: 20.60621890498037, 
-      lng:-88.26204900499128
-    },
-    zoom:20
-  };
-
-
 
 const CantactForm = () => {
+
+    function enviarEmail(event){
+        event.preventDefault();
+
+        emailjs.sendForm('service_pjph133','template_75ewr8p',event.target,'wg8UpuExYZvMxhtpM')
+        .then(res=>{console.log(res);
+          event.target.reset()
+        })
+    }
+
   return (
     <div className='section'>
         <div className='container grid-container contact-content'>
@@ -38,39 +38,42 @@ const CantactForm = () => {
                     Mail <span>us</span>
                 </h1>
 
-                <form>
+                <form onSubmit={enviarEmail}>
                     <div className='form-field name-email'>
+
                         <div>
                             <label>Name</label>
-                            <input type="text" name='name' />
+                            <input type="text" name="nombre" id="nombre"/>
+                              
                         </div>
 
                         <div>
                             <label>Email</label>
-                            <input type="email" name='email' />
+                            <input type="email" name="email" id="email" />
                         </div>
                     </div>
 
 
                     <div className='form-field'>
                         <div>
-                            <label>Subject</label>
-                            <input type="text" name='subject' />
+                            <label>Personas</label>
+                            <input type="number" name="cantidad" id="cantidad"/>
                         </div>
                     </div>
 
                     <div className='form-field'>
                         <div>
-                            <label>Message</label>
-                            <textarea type="text" name='message' />
+                            <label>Fecha</label>
+                            <textarea type="text" name="fecha" id="fecha" />
                         </div>
                     </div>
+                    <button type='submit'>Submit</button>
                 </form>
-
-                <button>Submit</button>
+    
             </div>
         </div>
-        <div style={{ height: '50vh', width: '50%' }}>
+
+        {/*<div style={{ height: '50vh', width: '50%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyAMtXDVWKxVZztZd1QOlpeiXyQfYQpna5E" }}
         defaultCenter={defaultProps.center}
@@ -81,7 +84,7 @@ const CantactForm = () => {
           text="My Marker"
         />
       </GoogleMapReact>
-    </div>
+  </div>*/}
     </div>
   )
 }
