@@ -1,0 +1,9 @@
+.banner-content {
+    height: 100%;
+    display: flex;
+    margin-left: 15%;
+    align-items: center;
+}
+.color{
+    background-color: chocolate;
+}
