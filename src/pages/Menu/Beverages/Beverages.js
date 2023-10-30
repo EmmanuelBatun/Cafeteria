@@ -4,58 +4,109 @@ import ListItem from "../../../components/ListItem/ListItem";
 
 const menuDataLeft = [
   {
-    title: "7up",
+    title: "OREO",
     price: 3.9,
   },
   {
-    title: "root beer",
+    title: "MAMUT",
     price: 3.9,
   },
   {
-    title: "apple juice",
+    title: "MAZAPAN",
     price: 3.9,
   },
   {
-    title: "orange juice",
+    title: "CHOCOLATE",
     price: 3.9,
+  },
+  {
+    title: "GANSITO",
+    price: 3.9,
+  }, {
+    title: "CARLOS V",
+    price: 3.9,
+  },
+  {
+    title: "CAJETA",
+    price: 3.9,
+  },
+  {
+    title: "CAPUCCINO",
+    price: 3.9,
+  },
+  {
+    title: "MOKA",
+    price: 3.9,
+  },
+  {
+    title: "FLAN NAPOLITANO",
+    price: 7.95,
   },
 ];
 
 const menuDataMiddle = [
   {
-    title: "coke",
+    title: "MOKA BLANCO",
     price: 3.9,
   },
   {
-    title: "pepsi",
+    title: "CARAMEL",
     price: 2.9,
   },
   {
-    title: "red bull",
+    title: "FRESA CREAM",
     price: 4.9,
   },
   {
-    title: "bitter lemon",
+    title: "SNICKERS",
     price: 2.95,
+  },
+  {
+    title: "NUTELLA",
+    price: 3.9,
+  },
+  {
+    title: "CHORORETAS",
+    price: 3.9,
+  },
+  {
+    title: "FRAPPE CHAI",
+    price: 3.9,
+  },
+  {
+    title: "MATCHA FRAPPE",
+    price: 2.7,
+  },
+  {
+    title: "FRAPPE CHAI",
+    price: 5.9,
+  },
+  {
+    title: "RED LAVEL",
+    price: 5.9,
   },
 ];
 
 const menuDataRight = [
   {
-    title: "crush",
+    title: "JAVA CHIPS",
     price: 2.7,
   },
   {
-    title: "crystal light",
+    title: "FRAPPE CHAI",
     price: 5.9,
   },
   {
-    title: "banana shake",
+    title: "RED LAVEL",
     price: 5.9,
   },
   {
-    title: "pineapple shake",
+    title: "FLAN NAPOLITANO",
     price: 7.95,
+  },
+  {
+    title: "JAVA CHIPS",
+    price: 3.9,
   },
 ];
 
@@ -64,7 +115,7 @@ const Beverages = () => {
     <div className="section">
       <div className="container beverages">
         <h1 className="heading-secondary">
-          Non Alcoholic <span> Beverages</span>
+          FRAP<span>PPES</span>
         </h1>
 
         <div className="grid-container">

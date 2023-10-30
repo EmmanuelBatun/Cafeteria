@@ -5,8 +5,12 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import  logo  from "../../assets/logo.jpg"
 
 const Footer = () => {
+
   return (
-    <div className="section footer">
+
+
+
+    <div className="section footer ">
       <div className="container">
         <div className="grid-container">
           <div className="footer-grid-item">
@@ -40,7 +44,7 @@ const Footer = () => {
           </div>
           <div>
           <FloatingWhatsApp 
-          phoneNumber="9981592390" 
+          phoneNumber="9851007259" 
           accountName="Estacion Cafe"
           placeholder="Hola Necesito infromacion..."
           chatMessage="Hola en que podemos ayudarte"
@@ -53,6 +57,7 @@ const Footer = () => {
       </div>
     </div>
   );
+    
 };
 
 export default Footer;

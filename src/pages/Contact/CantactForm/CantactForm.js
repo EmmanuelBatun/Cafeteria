@@ -1,20 +1,11 @@
 import React from 'react'
 import './CantactForm.css'
-import emailjs from 'emailjs-com';
 
 import bgImage from '../../../assets/cake.jpg'
 
 
 const CantactForm = () => {
 
-    function enviarEmail(event){
-        event.preventDefault();
-
-        emailjs.sendForm('service_pjph133','template_75ewr8p',event.target,'wg8UpuExYZvMxhtpM')
-        .then(res=>{console.log(res);
-          event.target.reset()
-        })
-    }
 
   return (
     <div className='section'>
@@ -38,7 +29,7 @@ const CantactForm = () => {
                     Mail <span>us</span>
                 </h1>
 
-                <form onSubmit={enviarEmail}>
+                <form >
                     <div className='form-field name-email'>
 
                         <div>

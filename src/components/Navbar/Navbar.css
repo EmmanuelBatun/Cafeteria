@@ -1,78 +1,93 @@
-.header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(0,0,0,0.25);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 9999;
+.active{
+    background-color: #1d4ed8;
 }
 
-.header-bg {
-    background-color: rgba(0,0,0,0.85);
-    transition: 0.5s;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
+nav {
+    display:flex;
     justify-content: space-between;
-    height: 90px;
+    align-items: center;
+    background-color: #0f172a;
+    color: white;
+    position:static;
+    top: 0;
+    
 }
 
-.nav-menu {
+nav .title {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
     display: flex;
 }
 
-.nav-menu li {
-    padding: 0 15px;
+nav ul li {
+   list-style: none; 
 }
 
-.nav-menu .nav-link {
-    color: var(--color-white);
-    font-size: 20px;
-    font-weight: 500;
-
-    transition: all 0.2s ease;
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
 }
 
-.nav-menu .nav-link:hover,
-.active {
-    color: var(--color-primary) !important;
+nav ul li a:not(.active):hover {
+    background-color:#172554 ;
 }
 
-.hamburger {
+nav .menu {
     display: none;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+
+@media (max-width: 700px) {
+    nav .menu {
+        display: flex;
     }
 
-    .nav-menu {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0,0,0,0.9);
+    nav {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
         text-align: center;
-        transition: 0.3s;
-        z-index: -1;
     }
 
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        padding: 15px 0;
-    }
-
-    .nav-menu .nav-link {
-        font-size: 30px;
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
     }
 }

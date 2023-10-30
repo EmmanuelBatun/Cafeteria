@@ -1,81 +1,80 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion"
 import { Link, NavLink } from "react-router-dom";
-
-import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/logo.jpg"
 
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [color, setColor] = useState(false);
-
-  const changeColor = () => {
-    if(window.scrollY >= 100) {
-      setColor(true)
-    } else {
-      setColor(false)
-    }
-  }
-
-  window.addEventListener("scroll", changeColor);
-
-  const handleClick = () => {
-    setClick(!click)
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className={color ? "header header-bg" : 'header'}>
-      <div className="container">
-        <div className="nav-bar">
-          <Link to="/">
-            <img src={logo} alt="logo" width={50} />
-          </Link>
 
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li onClick={handleClick}>
-              <NavLink className="nav-link" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li onClick={handleClick}>
-              <NavLink className="nav-link" to="/menu">
-                Menu
-              </NavLink>
-            </li>
-            <li onClick={handleClick}>
-              <NavLink className="nav-link" to="/delivery">
-                Delivery
-              </NavLink>
-            </li>
-            <li onClick={handleClick}>
-              <NavLink className="nav-link" to="/about">
-                About
-              </NavLink>
-            </li>
-            <li onClick={handleClick}>
-              <NavLink className="nav-link" to="/contact">
-                Contact
-              </NavLink>
-            </li>
-
-            <li onClick={handleClick}>
-              <button>Order now</button>
-            </li>
-          </ul>
-
-          <div className="hamburger" onClick={handleClick}>
-            {click ? (
-              <FaTimes size={20} style={{ color: "#fff" }} />
-            ) : (
-              <FaBars size={20} style={{ color: "#fff" }} />
-            )}
-          </div>
-        </div>
-      </div>
+    <nav>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+            >
+    <Link to="/" className="title"> 
+    <img src={logo} width={60} title="ESTACION CAFE"></img>
+    </Link>
+    </motion.div>
+    <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  );
+
+    <ul className={menuOpen ? "open" : ""}>
+      <li>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+            >
+        <NavLink to="/">Home</NavLink>
+        </motion.div>
+      </li>
+      <li>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+            >
+        <NavLink to="/menu">Menu</NavLink>
+        </motion.div>
+      </li>
+      <li>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01]
+        }}
+            >
+        <NavLink to="/contact">Contact</NavLink>
+        </motion.div>
+      </li>
+    </ul>
+
+  </nav>
+);
 };
+
 
 export default Navbar;

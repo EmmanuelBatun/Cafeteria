@@ -1,23 +1,56 @@
 import React from 'react'
 import './OurChef.css'
+import imagen from "../../../assets/fnapolitano.jpg"
 
 const OurChef = () => {
   return (
     <div>
-        <div className='chef-img'>
-            <div className='container'>
-                <div className='chef-content'>
-                    <h1 className='heading-primary'>
-                        our <span>chef</span>
-                    </h1>
-
-                    <p className='text-white'>
-                    Award winning meals, delivered by an amazing team
-                    </p>
+        <html>
+      <body>
+        <div className='cont'>
+            <div className='card'>
+                <div className='imgBx'>
+                    <img src={imagen} alt=''></img>
+                </div>
+                <div className='content'>
+                    <h2>Name</h2>
+                    <p>Position</p>
                 </div>
             </div>
-        </div>
 
+        <div className='card'>
+                <div className='imgBx'>
+                    <img src={imagen} alt=''></img>
+                </div>
+                <div className='content'>
+                    <h2>Name</h2>
+                    <p>Position</p>
+                </div>
+            </div>
+
+            <div className='card'>
+                <div className='imgBx'>
+                    <img src={imagen} alt=''></img>
+                </div>
+                <div className='content'>
+                    <h2>Name</h2>
+                    <p>Position</p>
+                </div>
+            </div>
+
+            <div className='card'>
+                <div className='imgBx'>
+                    <img src={imagen} alt=''></img>
+                </div>
+                <div className='content'>
+                    <h2>Name</h2>
+                    <p>Position</p>
+                </div>
+            </div>
+
+            </div>
+      </body>
+      </html>
         {/* chef info  */}
 
         <div className='container'>

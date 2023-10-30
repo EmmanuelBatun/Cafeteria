@@ -2,11 +2,10 @@ import React, { useState } from "react";
 
 import "./AmazingMeal.css";
 
-import image1 from "../../../assets/burger.jpg";
-import image2 from "../../../assets/cheese.jpg";
+import image1 from "../../../assets/fondo1.jpg";
+import image2 from "../../../assets/sandwihon.jpg";
 import image3 from "../../../assets/cake.jpg";
-import image4 from "../../../assets/coffee.jpg";
-import image5 from "../../../assets/pizza.jpeg";
+
 
 import Slider from "react-slick";
 
@@ -20,8 +19,6 @@ const AmazingMeal = () => {
     { id: 1, url: image1 },
     { id: 2, url: image2 },
     { id: 3, url: image3 },
-    { id: 4, url: image4 },
-    { id: 5, url: image5 },
   ]);
 
   const settings = {

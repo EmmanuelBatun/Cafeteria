@@ -7,52 +7,107 @@ import coffeeImage from "../../../assets/coffee-items.jpg";
 
 const menuDataRight = [
   {
-    title: "Low Carb CoffeeSelection",
-    description: "grilled chicken breast with veggies",
+    title: "Expreso",
+    description: "Deescripcion",
     price: 13,
   },
   {
-    title: "Bagel",
-    description: "with salmon, cream cheese and salsa",
+    title: " Doble Expreso",
+    description: "Deescripcion",
     price: 8.5,
   },
   {
-    title: "American Pancakes",
-    description: "with chocolate  sauce or maple syrup, honey and cream",
+    title: "Expresso Macchiato (Cortado)",
+    description: "Deescripcion",
     price: 21,
   },
   {
-    title: "Low Carb CoffeeSelection",
-    description: "grilled chicken breast with veggies",
+    title: "Expreso con crema batida",
+    description: "Deescripcion",
     price: 13,
   },
   {
-    title: "Bagel",
-    description: "with salmon, cream cheese and salsa",
+    title: "AFFOGATO CAFE",
+    description: "Deescripcion",
     price: 8.5,
   },
   {
-    title: "American Pancakes",
-    description: "with chocolate  sauce or maple syrup, honey and cream",
+    title: "CADE CON LECHE",
+    description: "Deescripcion",
     price: 21,
   },
   {
-    title: "Low Carb CoffeeSelection",
-    description: "grilled chicken breast with veggies",
+    title: "AMERICANO",
+    description: "Deescripcion",
     price: 13,
+  },
+  {
+    title: "CAPPUCHINO",
+    description: "Deescripcion",
+    price: 13,
+  }
+];
+
+const menuDataLeft = [
+  {
+    title: "LATE",
+    description: "Deescripcion",
+    price: 13,
+  },
+  {
+    title: "VAINILLA",
+    description: "Deescripcion",
+    price: 33,
+  },
+  {
+    title: "MOKA",
+    description: "Deescripcion",
+  },
+  {
+    title: "CARAMEL",
+    description: "Deescripcion",
+    price: 22,
+  },
+  {
+    title: "CHAI LATTE (TE CHAI",
+    description: "Deescripcion",
+    price: 22,
+  },
+  {
+    title: "MATCHA LATTE",
+    description: "Deescripcion",
+    price: 22,
+  },
+  {
+    title: "CHOCOLATE oaxaca(Leche)",
+    description: "Deescripcion",
+    price: 22,
+  },
+  {
+    title: "CHOCOLATE oaxaca(Agua)",
+    description: "Deescripcion",
+    price: 22,
   },
 ];
+
 
 const CoffeeSelection = () => {
   return (
     <div className="container coffee-selection">
       <h1 className="heading-secondary">
-        coffee<span> Selection</span>
+        Bebidas<span> Calientes</span>
       </h1>
 
       <div className="grid-container">
-        <div>
-          <img src={coffeeImage} alt="coffee items" />
+      <div>
+          {menuDataLeft.map((data, i) => (
+            <ListItem
+              title={data.title}
+              description={data.description}
+              price={data.price}
+              
+            />
+          ))}
         </div>
 
         <div>
